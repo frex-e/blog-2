@@ -10,7 +10,9 @@ export default {
     "func": Function
   },
   mounted() {
-
+    const canvas = createCanvas(this.uuid).zoomtoggle(true);
+    this.func(canvas)
   }
 }
+
 </script>

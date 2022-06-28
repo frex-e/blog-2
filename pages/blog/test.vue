@@ -35,7 +35,7 @@
 	<h3>SubSubTitle</h3>
 	A lot of text and crap I want to fuxking die.
 
-	<GraphWrapper uuid="first" :func="first">
+	<GraphWrapper uuid="first" :func="first" class="h-15">
 	</GraphWrapper>
 </template>
 
@@ -53,6 +53,6 @@ export default {
 import { Canvas } from 'algorithmx';
 
 const first = (canvas: Canvas) => {
-	canvas.node(1).add();
+	canvas.nodes([1, 2, 3]).add();
 }
 </script>
