@@ -1,13 +1,25 @@
 <template>
   <div class="blog-content max-w-2xl px-6 py-10">
+    <div class="display-title">{{ route.meta.title }}</div>
+    <div class="display-date">{{ route.meta.date }}</div>
     <NuxtPage />
   </div>
 </template>
 
 <script setup>
+const route = useRoute();
+console.log(route.meta)
 </script>
 
 <style lang="less">
+.display-title {
+  @apply text-white text-5xl font-bold border-b pb-1;
+}
+
+.display-date {
+  @apply text-zinc-400;
+}
+
 .blog-content {
 
   /* GRAPHS */

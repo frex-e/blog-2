@@ -3,3 +3,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.wrapper,
+.code-block{
+  @apply min-w-full;
+  @apply bg-white rounded-lg my-4 border-2 border-zinc-400;
+}
+
+svg.algorithmx {
+  @apply flex-auto;
+  @apply w-full rounded-lg;
+}

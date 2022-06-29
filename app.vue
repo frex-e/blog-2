@@ -15,3 +15,7 @@
 
 <style>
 </style>
+
+<script setup>
+import 'highlight.js/styles/atom-one-light.css'
+</script>

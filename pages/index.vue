@@ -1,6 +1,8 @@
 <template>
 </template>
 
-<style>
+<script setup>
+const router = useRouter()
+console.log(router.getRoutes())
+</script>
   
-</style>

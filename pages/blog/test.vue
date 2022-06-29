@@ -1,6 +1,5 @@
 <template>
-	<Title>Hi</Title>
-	<Date>23rd of June, 2019</Date>
+
 	<h1>Title</h1>
 	<p>
 		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at dolor rutrum, luctus elit vitae, ullamcorper
@@ -31,9 +30,13 @@
 		non, venenatis consectetur massa.
 	</p>
 
-	<CodeBlock lang="js">let a = 2;</CodeBlock>
 	<h3>SubSubTitle</h3>
 	A lot of text and crap I want to fuxking die.
+
+	<CodeBlock lang="js" code="
+	let a = 2;
+	">
+	</CodeBlock>
 
 	<GraphWrapper uuid="first" :func="first" class="h-15">
 	</GraphWrapper>
@@ -51,6 +54,11 @@ export default {
 
 <script setup lang="ts">
 import { Canvas } from 'algorithmx';
+
+definePageMeta({
+	title: "Playing with Breadth and Depth First Search",
+	date: "2022-06-04"
+})
 
 const first = (canvas: Canvas) => {
 	canvas.nodes([1, 2, 3]).add();

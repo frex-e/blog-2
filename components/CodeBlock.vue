@@ -1,15 +1,16 @@
 <template>
-  <div class="prism">
-    <pre class="line-numbers" :class="`language-${lang}`"><code> <slot /> </code> </pre>
-  </div>
+  <div class="code-block" v-html="code.value"></div>
 </template>
 
-<script setup>
-import Prism from 'prismjs'
+<style lang="less" scoped>
+.code-block {
+  @apply p-2 font-mono text-gray-700;
+}
+</style>
 
-const props = defineProps(['lang']);
+<script setup lang="ts">
+import hljs from 'highlight.js'
+const props = defineProps({ "code": String, "lang": String });
 
-onMounted(() => {
-  Prism.highlightAll()
-})
+const code = hljs.highlight(props.lang, props.code);
 </script>

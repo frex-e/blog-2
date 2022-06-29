@@ -14,16 +14,6 @@
 </template>
 
 <style lang="less">
-.wrapper,
-.prism {
-  @apply min-w-full;
-  @apply bg-gray-50 rounded-lg;
-}
-
-svg.algorithmx {
-  @apply flex-auto;
-  @apply w-full rounded-lg;
-}
 </style>
 
 <script setup>
