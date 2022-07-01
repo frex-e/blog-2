@@ -5,7 +5,7 @@ import Edge from "./Edge";
 type Uuid = string | number;
 class Graph {
   private cunter = 0;
-  private _canvas: algoX.Canvas;
+  _canvas: algoX.Canvas;
   private _nodes: Node[] = [];
   private _edges: Edge[] = [];
 
@@ -155,6 +155,7 @@ class Graph {
 
     source._edges.push(edge);
     target._edges.push(edge);
+    this._edges.push(edge);
     return edge;
   }
 

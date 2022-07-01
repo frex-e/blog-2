@@ -44,6 +44,7 @@ onMounted(() => {
   if (!show) {
     return;
   }
+  if (graph.value == undefined) {
   graph.value = new Graph(props.uuid, [
     Math.min(
       800,
@@ -54,8 +55,15 @@ onMounted(() => {
         document.documentElement.offsetWidth,
         document.documentElement.clientWidth
       ) - 100), props.height])
+  }
   props.animation(graph.value);
 });
+
+onBeforeUnmount(() => {
+  if (graph.value) {
+    graph.value.reset()
+  }
+})
 
 const reset = () => {
   graph.value?.reset()

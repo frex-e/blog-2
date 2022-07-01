@@ -1,7 +1,7 @@
 <template>
  <div>
   <MyTitle page-name="test">
-    Playing with <span class="text-green-600">Depth</span> and <span class="text-highlight">Breadth</span> First Search
+    <span class="text-highlight">Playing</span> with <span class="text-green-600">Depth</span> First Search
   </MyTitle>
 
   <h3>
@@ -36,9 +36,12 @@
   </p>
   <p>
     This is fine, but when writing my graph scripts, it became
-    somewhat frustrating have to remember to both keep track of the graph model and
+    somewhat <span class="text-highlight italic">frustrating</span> having to remember to both keep track of the graph model and
     what I was drawing to the canvas. So naturally, I went down the rabbit hole of
     remaking pynode myself.
+  </p>
+  <p class="text-zinc-500">
+    (and by remaking, I mean making a TypeScript wrapper around algorithmX, instead of python)
   </p>
 
   <p>
@@ -50,11 +53,11 @@
     Depth First Search
   </h2>
   <p>
-    DFS, I think, feels like the dead brain approach. Not
-    that I don't like DFS. Anything with recursion is fun, but
+    DFS, I think, feels like the <span class="text-highlight italic">dead brain approach</span>. Not
+    that I don't like DFS. Anything with <span class="text-red-600">recursion</span> is fun, but
   </p>
   <p>
-    "Just keep going until we reach a dead end, then go back and go the other way",
+    <span class="italic text-zinc-500">"Just keep going until we reach a dead end, then go back and go the other way"</span>,
     always seems to me unreasonably and ammusingly effective.
   </p>
   <Graph uuid="firstt" :animation="animate">
@@ -78,7 +81,6 @@ const route = useRoute();
 const graph = !(route.name == 'blog')
 
 definePageMeta({
-  title: 'Test',
   date: "2022-06-04"
 })
 
@@ -99,11 +101,32 @@ const dfs = (current: Node, graph: Graph) => {
   })
 }
 
+const dfsFirst = (current: Node) => {
+  current.setAttribute('visited',true)
+  current.outgoingEdges().forEach(edge => {
+    if (!edge.otherNode(current).getAttribute('visited')) {
+      dfsFirst(edge.otherNode(current))
+    }
+  })
+}
+
 const animate = (graph: Graph) => {
   graph.gnpRandomGraph(15, 0.15, false);
-  // graph.nodes().forEach(node => node.setAttribute('visited',false));
 
-  graph.pause(1)
+  while(graph.node(0).degree() == 0) {
+    graph.reset()
+    graph.gnpRandomGraph(15,0.15,false)
+  }
+  graph.nodes().forEach(node => node.setAttribute('visited',false));
+
+  dfsFirst(graph.node(0))
+  graph.nodes().forEach(node => {
+    if (!node.getAttribute('visited')) {
+      graph.remove(node)
+    }
+  })
+  graph.nodes().forEach(node => node.setAttribute('visited',false));
+  // graph.pause(1)
   dfs(graph.node(0), graph);
 }
 </script>

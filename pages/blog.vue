@@ -103,7 +103,7 @@ onMounted(() => {
 }
 
 .blog-content .title {
-  @apply text-6xl font-bold w-full;
+  @apply text-4xl sm:text-6xl font-bold w-full;
 }
 
 .blog-preview .title {

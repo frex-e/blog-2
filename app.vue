@@ -21,4 +21,7 @@ main {
 
 <script setup>
 import 'highlight.js/styles/atom-one-light.css'
+useHead({
+  title: "Indra Kusumah-kasim"
+})
 </script>

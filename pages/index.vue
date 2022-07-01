@@ -6,7 +6,7 @@
     <div>
       <!-- I love anything math and computer sciency things -->
       <div class="text-5xl sm:text-7xl">
-        I love <span class="text-red-600">math</span>
+        I love <span class="text-red-600">maths</span>
         and <span class="text-highlight">computer sciency</span> things
       </div>
     </div>
@@ -20,6 +20,9 @@
         functions</MyLink>
       to use in
       VCE Maths exams. (Totally not cheating)
+
+      <NuxtLink to="/blog" class="block mb-4 mt-8 sm:mt-16 text-xl sm:text-xl text-red-600 border-red-600 border-2 w-min 
+      whitespace-nowrap p-2 rounded-lg hover:bg-red-600 hover:text-white transition-colors"> Check Out My Blog</NuxtLink>
     </div>
   </div>
 </template>

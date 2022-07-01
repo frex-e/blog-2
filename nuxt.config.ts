@@ -13,5 +13,6 @@ export default defineNuxtConfig({
       devtools: true,
     }
   },
-  target: 'static'
+  target: 'static',
+  ssr: false
 })
