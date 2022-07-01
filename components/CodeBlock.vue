@@ -4,7 +4,8 @@
 
 <style lang="less" scoped>
 .code-block {
-  @apply p-2 font-mono text-gray-700;
+  @apply p-2 font-mono text-gray-700 overflow-scroll;
+  white-space: pre-wrap;
 }
 </style>
 

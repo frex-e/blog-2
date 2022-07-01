@@ -6,5 +6,12 @@ export default defineNuxtConfig({
   css: [
     '@/assets/css/main.css',
     '@/assets/css/prism-one-light.css'
-  ]
+  ],
+  vue: {
+    config: {
+      productionTip: false,
+      devtools: true,
+    }
+  },
+  target: 'static'
 })

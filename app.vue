@@ -2,18 +2,21 @@
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,600,0,0" />
 
-  <div class="text-white">
+  <div class="text-black">
     <SiteHeader />
-
-    <main class="bg-gray-700 min-w-full min-h-screen 
-    flex flex-col items-center">
-      <NuxtPage class="min-h-screen max-w-2xl
+    <main class="min-w-full max-w-full min-h-full 
+    flex flex-col items-center text-md sm:text-lg">
+      <NuxtPage class="min-h-full
       w-full" />
     </main>
+
   </div>
 </template>
 
 <style>
+main {
+  @apply font-sans;
+}
 </style>
 
 <script setup>

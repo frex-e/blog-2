@@ -1,10 +1,14 @@
 <template>
-  <nav class="flex flex-row items-center w-full bg-gray-800 p-3 border-b-2 border-highlight header">
+  <nav class="flex flex-row items-center py-2 border-b-2 border-red-500 header px-4">
     <div class="text-lg sm:text-2xl font-semibold flex-grow items-baseline">
-      <NuxtLink to="/">Indra Kusumah-kasim <span class="font-mono text-highlight font-normal">{frex-e}</span></NuxtLink>
+      <NuxtLink to="/">Indra Kusumah-kasim <span class="font-mono text-green-500 font-normal">{frex-e}</span></NuxtLink>
     </div>
+      <NuxtLink to="/blog" class="aa text-2xl font-bold text-zinc-500 hover:text-highlight transition-all"> Blog </NuxtLink>
   </nav>
 </template>
 
-<style>
+<style scoped>
+.aa.router-link-active {
+  @apply text-highlight;
+}
 </style>

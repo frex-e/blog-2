@@ -4,15 +4,16 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'mono': ['Fira Code'],
+        mono: ["Fira Code"],
+        sans: ["Comic Neue"],
       },
       colors: {
-        'highlight': '#3b82f6'
+        highlight: "#3b82f6",
       },
       screens: {
-        'xs': '480px'
-      }
+        xs: "380",
+      },
     },
   },
   plugins: [],
-}
+};
