@@ -32,8 +32,9 @@ const kk = ref(0)
 
 const router = useRouter();
 pages.value = router.getRoutes().filter(route => route.path.toString().startsWith("/blog/")).sort((a, b) => {
-  return a.meta.date > b.meta.date ? 1 : -1;
+  return a.meta.date < b.meta.date ? 1 : -1;
 });
+
 pages.value.forEach(page => page.name = page.name.toString().replace("blog-", ""))
 onMounted(() => {
   display.value = true;
@@ -42,7 +43,7 @@ onMounted(() => {
 
 <style lang="less">
 .display-title {
-  @apply text-5xl font-bold border-b-2 pb-1 border-zinc-400;
+  @apply text-5xl font-bold border-b-2 pb-1 border-zinc-400 block;
 }
 
 .display-date {
@@ -58,7 +59,9 @@ onMounted(() => {
   // }
 
   /* TITLE */
-  .title {}
+  .title {
+    @apply block;
+  }
 
   /* DATE */
   .date {

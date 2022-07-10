@@ -7,7 +7,7 @@
       <!-- I love anything math and computer sciency things -->
       <div class="text-5xl sm:text-7xl">
         I love <span class="text-red-600">maths</span>
-        and <span class="text-highlight">computer sciency</span> things
+        and <span class="text-highlight">computer sciencey</span> things
       </div>
     </div>
     <div class="text-lg md:text-xl mt-4">

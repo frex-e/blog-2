@@ -9,6 +9,10 @@
   @apply bg-white rounded-lg my-4 border-2 border-zinc-400 overflow-hidden max-w-full;
 }
 
+.code-block{
+  @apply text-xs sm:text-sm;
+}
+
 svg.algorithmx {
   @apply flex-auto;
   @apply w-full rounded-lg;
