@@ -1,0 +1,4 @@
+<!-- Text Red Component -->
+<template>
+  <span class="text-red-500"> <slot /> </span>
+</template>
