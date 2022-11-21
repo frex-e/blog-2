@@ -17,7 +17,8 @@
       Currently I'm learning web development with <span class="text-green-500">VueJS.</span> I also love Mathematics
       and have made a
       <MyLink color="orange-500" to="https://github.com/frex-e/jmssTools">library of Wolfram Language/Mathematica
-        functions</MyLink>
+        functions</MyLink><div class="text-orange-500 border-orange-500"></div>
+
       to use in
       VCE Maths exams. (Totally not cheating)
 

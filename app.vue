@@ -1,27 +1,14 @@
 <template>
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,600,0,0" />
-
-  <div class="text-black">
-    <SiteHeader />
-    <main class="min-w-full max-w-full min-h-full 
-    flex flex-col items-center text-md sm:text-lg">
-      <NuxtPage class="min-h-full
-      w-full" />
-    </main>
-
+  <div class="min-h-screen flex flex-col items-center">
+    <SiteHeader class="flex-none w-full" />
+    <NuxtPage class="flex-grow" />
   </div>
 </template>
 
-<style>
-main {
-  @apply font-sans;
-}
-</style>
-
-<script setup>
-import 'highlight.js/styles/atom-one-light.css'
+<script setup lang="ts">
 useHead({
-  title: "Indra Kusumah-kasim"
+  titleTemplate: (titleChunk) => {
+    return titleChunk ? `${titleChunk} - Indra Kusumah-Kasim` : 'Indra Kusumah-Kasim';
+  },
 })
 </script>

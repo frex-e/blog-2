@@ -1,27 +1,25 @@
-import { readdir, readdirSync } from 'fs'
-import { defineNuxtConfig } from 'nuxt'
-
-// https://v3.nuxtjs.org/api/configuration/nuxt.config
-const files = readdirSync('./pages/blog/').map(file => "/blog/" + file.replace('.vue', ''))
-files.push('/','/blog')
-
+// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ['@nuxt/content','@nuxtjs/tailwindcss'],
-  css: [
-    '@/assets/css/main.css',
-    '@/assets/css/prism-one-light.css'
+  css: ['~/assets/main.less', '~/assets/code.css'],
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
+  },
+  app: {
+    // head: {
+    //   titleTemplate: '%s - Indra Kusumah-Kasim'
+    // }
+  },
+  modules: [
+    ['@nuxtjs/google-fonts']
   ],
-  vue: {
-    config: {
-      productionTip: false,
-      devtools: true,
+  googleFonts: {
+    download: true,
+    families: {
+      'Comic+Neue': true,
+      'Fira+Mono': true,
     }
   },
-  // target: 'static',
-  ssr: false,
-  nitro: {
-    prerender: {
-      routes: files
-    }
-  }
 })

@@ -1,8 +1,8 @@
 <template>
-  <div v-if="useRoute().name != 'blog'" class="title" ref="mySlot">
+  <div v-if="useRoute().name != 'blog'" class="page-title" ref="mySlot">
     <slot />
   </div>
-  <NuxtLink v-else :to="`/blog/${props.pageName}`" class="title"> 
+  <NuxtLink v-else :to="`/blog/${props.pageName}`" class="preview-title"> 
     <slot />
   </NuxtLink>
 </template>
