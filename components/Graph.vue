@@ -14,10 +14,19 @@
 .graph {
   @apply w-full max-h-fit;
 }
+
+.graph-wrapper {
+  @apply my-4 overflow-hidden;
+}
+
+svg.algorithmx {
+  @apply flex-auto;
+  @apply w-full rounded-lg;
+}
 </style>
 
 <script setup lang="ts">
-import { Graph } from './algoNext';
+import { Graph } from 'algoNext';
 
 const show = useRoute().name != "blog"
 
@@ -34,20 +43,20 @@ const props = defineProps({
   },
   height: {
     type: Number,
-    default: 400,
+    default: 500,
   },
 })
 
 const graph = ref<Graph | null>(null);
 
 onMounted(() => {
+  console.log(show)
   if (!show) {
     return;
   }
   if (graph.value == undefined) {
   graph.value = new Graph(props.uuid, [
-    Math.min(
-      800,
+    Math.min(1152,
       Math.max(
         document.body.scrollWidth,
         document.documentElement.scrollWidth,
@@ -67,7 +76,7 @@ onBeforeUnmount(() => {
 
 const reset = () => {
   graph.value?.reset()
-  graph.value.pause(250)
+  graph.value?.pause(250)
   props.animation(graph.value);
 }
 

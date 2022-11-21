@@ -1,6 +1,6 @@
 <template>
   <a :href="to" :class="
-  `text-${color} hover:border-b-2 border-${color}`
+  `text-${color} border-b-2 border-${color} hover:bg-slate-200`
   "><slot></slot></a>
 </template>
 

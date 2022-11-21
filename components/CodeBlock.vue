@@ -1,17 +1,23 @@
 <template>
-  <div class="code-block" v-html="code.value"></div>
+  <div class="code-block">
+    <pre class="code" v-html="hljs.highlight(
+      props.code,
+      { language: props.lang }
+    ).value"></pre>
+  </div>
 </template>
-
-<style lang="less" scoped>
-.code-block {
-  @apply p-2 font-mono text-gray-700 overflow-scroll;
-  white-space: pre-wrap;
-}
-</style>
 
 <script setup lang="ts">
 import hljs from 'highlight.js'
-const props = defineProps({ "code": String, "lang": String });
 
-const code = hljs.highlight(props.lang, props.code);
+const props = defineProps({
+  code: {
+    type: String,
+    required: true
+  },
+  lang: {
+    type: String,
+    required: true
+  }
+})
 </script>
