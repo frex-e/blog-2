@@ -8,9 +8,12 @@ export default defineNuxtConfig({
     },
   },
   app: {
-    // head: {
+    head: {
     //   titleTemplate: '%s - Indra Kusumah-Kasim'
-    // }
+      // link: [
+      //   { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      // ]
+    }
   },
   modules: [
     ['@nuxtjs/google-fonts']
