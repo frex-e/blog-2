@@ -1,5 +1,5 @@
 <template>
-  <div class="blog-content p-4 max-w-5xl pt-24">
+  <div class="blog-content p-4 max-w-5xl pt-24 min-w-0 w-full">
     <NuxtPage></NuxtPage>
   </div>
 </template>
