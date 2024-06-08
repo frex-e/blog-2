@@ -13,9 +13,10 @@
     <div class="text-lg md:text-xl mt-4">
       <img src="@/assets/pic.png" class="m-2 w-1/3 float-right border-red-600 border-2 sm:border-4
       rounded-3xl">
-      I'm a highschool student who loves programming and making things for people.
-      Currently I'm learning web development with <span class="text-green-500">VueJS.</span> I also love Mathematics
-      and have made a
+      I'm a university student who loves competitive programming. I happen to be president at <MyLink color="blue-500" to="https://monashaps.com/">
+      Monash Algorithms and Problem Solving</MyLink>, and I also
+      teach at Monash University.
+      If you're a VCE student, I have made a
       <MyLink color="orange-500" to="https://github.com/frex-e/jmssTools">library of Wolfram Language/Mathematica
         functions</MyLink><div class="text-orange-500 border-orange-500"></div>
 
