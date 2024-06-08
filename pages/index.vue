@@ -17,11 +17,10 @@
       Monash Algorithms and Problem Solving</MyLink>, and I also
       teach at Monash University.
       If you're a VCE student, I have made a
-      <MyLink color="orange-500" to="https://github.com/frex-e/jmssTools">library of Wolfram Language/Mathematica
-        functions</MyLink><div class="text-orange-500 border-orange-500"></div>
-      to use in
-      VCE Maths exams. (Totally not cheating)
+      <MyLink color="orange-500" to="https://github.com/frex-e/jmssTools">library of Wolfram Language/Mathematica 
+      functions</MyLink> to use in VCE Maths exams. (Totally not cheating)
       <span class="text-blue-500 border-blue-500"></span>
+      <div class="text-orange-500 border-orange-500"></div>
 
       <NuxtLink to="/blog" class="block mb-4 mt-8 sm:mt-16 text-xl sm:text-xl text-red-600 border-red-600 border-2 w-min 
       whitespace-nowrap p-2 rounded-lg hover:bg-red-600 hover:text-white transition-colors"> Check Out My Blog</NuxtLink>
